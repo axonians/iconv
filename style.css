@@ -1,0 +1,457 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+}
+:root {
+  font-size: 14px;
+  --base-hue: 277;
+  --fonts: "Poppins", sans-serif;
+  --alt-fonts: "Montserrat", "Poppins", sans-serif;
+  --hue: var(--base-hue, 277);
+  --primary-clr: hsl(var(--hue), 24%, 18%);
+  --light-clr: hsl(var(--hue), 24%, 97%);
+  --lighter-clr: hsl(var(--hue), 24%, 92%);
+  --primary-bg: hsl(var(--hue), 54%, 55%);
+  --light-bg: hsl(var(--hue), 54%, 85%);
+  --lighter-bg: hsl(var(--hue), 54%, 92%);
+  --dark-bg: hsl(var(--hue), 54%, 35%);
+  --font-weight: 300;
+}
+html,
+button,
+input,
+.button,
+.btn,
+body,
+select,
+textarea {
+  font-family: var(--fonts);
+  fpmt-weight: var(--font-weight);
+}
+body {
+  padding: 1rem;
+  margin: 0;
+  color: var(--primary-clr);
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 0.5rem;
+}
+a {
+  color: var(--primary-bg);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-clr);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  margin: 0.5rem auto;
+  font-family: var(--alt-fonts);
+}
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1.05rem;
+}
+mark,
+code,
+kbd {
+  background: var(--primary-bg);
+  color: var(--light-clr);
+}
+pre {
+  border: 1px dotted var(--primary-bg);
+  white-space: pre-wrap;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+blockquote {
+  border: 1px solid var(--primary-bg);
+  border-left-width: 5px;
+  font-style: italic;
+  padding: 0.5rem;
+  font-size: 90%;
+}
+img {
+  max-width: 100%;
+}
+.btn,
+.button,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  font-size: 90%;
+  border: 1px solid var(--input-border, var(--primary-bg));
+  border-radius: 2px;
+  outline: 0;
+  background: var(--input-bg, var(--primary-bg));
+  color: var(--input-clr, var(--light-clr));
+  padding: 0.5rem 0.7rem;
+  margin: 0.25rem auto;
+  cursor: pointer;
+}
+.btn:hover,
+.button:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  border: 1px solid var(--iput-border, var(--dark-bg));
+  background: var(--iput-bg, var(--dark-bg));
+  color: var(--iput-clr, var(--light-clr));
+  transition: all 0.15s;
+}
+.btn.outline,
+.button.outline {
+  --input-bg: transparent;
+  --input-clr: var(--primary-bg);
+  --iput-bg: transparent;
+  --iput-clr: var(--primary-clr);
+}
+.btn.clear,
+.button.clear {
+  --input-border: transparent;
+  --input-bg: transparent;
+  --input-clr: var(--primary-bg);
+  --iput-border: transparent;
+  --iput-bg: transparent;
+  --iput-clr: var(--primary-clr);
+}
+.disable,
+.disabled,
+[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+details {
+  padding: 0.5rem auto;
+}
+details summary {
+  border: 1px solid var(--primary-bg);
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 102%;
+}
+details article {
+  margin: 0.5rem;
+}
+dialog {
+  border: 1px solid var(--primary-bg);
+  border-radius: 5px;
+  color: var(--primary-clr);
+  min-width: 240px;
+  max-width: 80%;
+  max-height: 75%;
+}
+dialog::backdrop {
+  backdrop-filter: blur(5px);
+}
+input,
+select,
+textarea {
+  min-width: 12rem;
+  max-width: 100%;
+  border: 1px solid var(--primary-bg);
+  padding: 0.5rem 0.7rem;
+  font-size: 90%;
+  border-radius: 2px;
+  outline: 0;
+  background: transparent;
+}
+input:focus,
+select:focus,
+textarea:focus,
+input:hover,
+select:hover,
+textarea:hover {
+  border: 1px solid var(--primary-clr);
+  transition: all 0.2s;
+}
+select {
+  min-width: 13.5rem;
+  min-height: auto;
+}
+textarea {
+  min-height: 5rem;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  all: revert;
+  accent-color: var(--primary-bg);
+  cursor: pointer;
+}
+form legend {
+  font-weight: 400;
+  font-size: 120%;
+}
+form label {
+  display: inline-block;
+  margin: 0.5rem 1rem 0.5rem auto;
+  font-size: 90%;
+}
+form .btn,
+form .button,
+form button,
+form input[type="button"],
+form input[type="submit"],
+form input[type="reset"] {
+  display: inline-block;
+  margin-block: 0.5rem;
+  min-width: 13.5rem;
+}
+form.block {
+  max-width: 100%;
+}
+form.block input,
+form.block textarea {
+  display: block;
+  width: calc(100% - 1.5rem);
+}
+form.block .btn,
+form.block .button,
+form.block button,
+form.block input[type="button"],
+form.block input[type="submit"],
+form.block input[type="reset"],
+form.block select {
+  display: block;
+  width: 100%;
+  margin-inline: 0;
+}
+form.block input[type="checkbox"],
+form.block input[type="radio"] {
+  all: revert;
+  accent-color: var(--primary-bg);
+  cursor: pointer;
+}
+div.table {
+  display: block;
+  overflow: auto;
+  position: relative;
+  padding: auto 0.5rem;
+}
+table {
+  border-spacing: 0;
+  text-align: left;
+  width: 100%;
+}
+table thead,
+table tr:nth-child(1) {
+  background: var(--light-bg) !important;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--primary-clr);
+}
+table td,
+table th {
+  padding: 0.6rem 0.8rem;
+}
+table.striped tr:nth-child(odd) {
+  background: var(--lighter-clr);
+}
+table.hoverable tr:hover :not(th) {
+  background: var(--lighter-bg) !important;
+  transition: all 0.1s;
+}
+::-webkit-scrollbar {
+  width: 0.3rem;
+  height: 0.3rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--lighter-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--light-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-bg);
+}
+.clickable {
+  cursor: pointer !important;
+}
+.hidden {
+  display: none !important;
+}
+.float-right {
+  float: right !important;
+}
+.float-left {
+  float: left !important;
+}
+.center {
+  text-align: center !important;
+}
+.left {
+  text-align: left !important;
+}
+.right {
+  text-align: right !important;
+}
+.block {
+  display: block !important;
+}
+.flex {
+  display: flex !important;
+}
+.iblock {
+  display: inline-block !important;
+}
+.row {
+  display: grid;
+  grid-gap: 1px;
+}
+.row div {
+  border: 1px solid var(--primary-bg);
+  padding: 1rem;
+}
+.row.fluid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+@media only screen and (min-width: 1280px) {
+  .row {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .row .col-12,
+  .row .col-full {
+    grid-column: span 12;
+  }
+  .row .col-11 {
+    grid-column: span 11;
+  }
+  .row .col-10 {
+    grid-column: span 10;
+  }
+  .row .col-9,
+  .row .col-75 {
+    grid-column: span 9;
+  }
+  .row .col-8 {
+    grid-column: span 8;
+  }
+  .row .col-7 {
+    grid-column: span 7;
+  }
+  .row .col-6,
+  .row .col-half {
+    grid-column: span 6;
+  }
+  .row .col-5 {
+    grid-column: span 5;
+  }
+  .row .col-4 {
+    grid-column: span 4;
+  }
+  .row .col-3,
+  .row .col-quarter {
+    grid-column: span 3;
+  }
+  .row .col-2 {
+    grid-column: span 2;
+  }
+}
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  .row.md {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .row.md .md-8,
+  .row.md .col-full {
+    grid-column: span 8;
+  }
+  .row.md .md-7 {
+    grid-column: span 7;
+  }
+  .row.md .md-6,
+  .row.md .col-75 {
+    grid-column: span 6;
+  }
+  .row.md .md-5 {
+    grid-column: span 5;
+  }
+  .row.md .md-4,
+  .row.md .col-half {
+    grid-column: span 4;
+  }
+  .row.md .md-3 {
+    grid-column: span 3;
+  }
+  .row.md .md-2,
+  .row.md .col-quarter {
+    grid-column: span 2;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .row.sm {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .row.sm .sm-4,
+  .row.sm .col-full {
+    grid-column: span 4;
+  }
+  .row.sm .sm-3,
+  .row.sm .col-75 {
+    grid-column: span 3;
+  }
+  .row.sm .sm-2,
+  .row.sm .col-half {
+    grid-column: span 2;
+  }
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  padding-left: 1rem;
+}
+ul li,
+ol li {
+  margin-top: 0.2rem;
+}
+ul {
+  list-style: circle inside;
+}
+ol {
+  list-style: decimal inside;
+}
+dd,
+dt {
+  padding: 0;
+  margin: 0;
+  margin-top: 0.2rem;
+}
+dt {
+  font-weight: 400;
+}
+dd {
+  padding-left: 1rem;
+}
