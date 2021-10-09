@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "bootstrap-icons";
+  font-family: "bs-icons";
   src: url("./fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d") format("woff2"),
   url("./fonts/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d") format("woff");
 }
@@ -7,7 +7,7 @@
 [class^="bi-"]::before,
 [class*=" bi-"]::before {
   display: inline-block;
-  font-family: bootstrap-icons !important;
+  font-family: bs-icons !important;
   font-style: normal;
   font-weight: normal !important;
   font-variant: normal;
